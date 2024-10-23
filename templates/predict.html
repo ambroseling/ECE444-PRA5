@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Prediction</title>
+</head>
+<body>
+    <h1>Sentiment Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <textarea name="text" rows="4" placeholder="Enter your text here..."></textarea>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+    <p id="prediction-result">Prediction: <span id="prediction">{{ prediction }}</span></p>
+</body>
+</html>
